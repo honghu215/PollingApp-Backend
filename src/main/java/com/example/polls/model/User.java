@@ -43,7 +43,6 @@ public class User extends DateAudit {
     private String email;
 
     @NotBlank
-    @Size(max = 40)
     private String password;
 
     @ManyToMany(fetch = FetchType.LAZY)
@@ -57,7 +56,7 @@ public class User extends DateAudit {
     }
    
 
-    public User(String name, String email, String password, String username) { 
+    public User(String email, String name, String password, String username) { 
         this.name = name;
         this.email = email;
         this.password = password;
